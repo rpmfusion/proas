@@ -1,7 +1,7 @@
 Summary: Planning of astronomical observations
 Name: proas
 Version: 2.1.2
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL+
 Group: Applications/Engineering
 URL: https://guaix.fis.ucm.es/projects/proas/wiki
@@ -35,6 +35,9 @@ rm -rf %{buildroot}
 %{_bindir}/*
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 2.1.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Wed Sep 30 2009 Sergio Pascual <sergiopr@astrax.fis.ucm.es> 2.1.2-2
 - Changed licence to GPL+
 
