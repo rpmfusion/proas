@@ -1,11 +1,11 @@
 Summary: Planning of astronomical observations
 Name: proas
-Version: 2.1.2
-Release: 3%{?dist}
+Version: 2.2.0
+Release: 1%{?dist}
 License: GPL+
 Group: Applications/Engineering
 URL: https://guaix.fis.ucm.es/projects/proas/wiki
-Source0: ftp://astrax.fis.ucm.es/pub/users/spr/proas/%{name}-%{version}.tar.gz
+Source0: ftp://astrax.fis.ucm.es/pub/software/proas/%{name}-%{version}.tar.gz
 Buildroot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires: pgplot-devel gcc-gfortran
 
@@ -35,6 +35,9 @@ rm -rf %{buildroot}
 %{_bindir}/*
 
 %changelog
+* Thu Mar 22 2012 Sergio Pascual <sergiopr@fis.ucm.es> - 2.2.0-1
+- New upstream source
+
 * Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 2.1.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
