@@ -1,12 +1,11 @@
 Summary: Planning of astronomical observations
 Name: proas
 Version: 2.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL+
 Group: Applications/Engineering
 URL: https://guaix.fis.ucm.es/projects/proas/wiki
 Source0: ftp://astrax.fis.ucm.es/pub/software/proas/%{name}-%{version}.tar.gz
-Buildroot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires: pgplot-devel gcc-gfortran
 
 %description
@@ -19,22 +18,21 @@ a function of the universal time (UT).
 %setup -q
 
 %build
-%configure
+%configure FFLAGS="${FFLAGS} -fbackslash"
 make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
 make DESTDIR=%{buildroot} install
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc COPYING README manual.ps
 %{_bindir}/*
 
 %changelog
+* Wed Oct 10 2012 Sergio Pascual <sergiopr@fis.ucm.es> - 2.2.0-2
+- Enable -fbackslash (fixes bz #2517)
+
 * Thu Mar 22 2012 Sergio Pascual <sergiopr@fis.ucm.es> - 2.2.0-1
 - New upstream source
 
