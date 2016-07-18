@@ -66,5 +66,5 @@ make DESTDIR=%{buildroot} install
 * Mon Oct 10 2005 Sergio Pascual <sergiopr@astrax.fis.ucm.es> 2.0-2
 - Updated spec file.
 
-* Tue Jan 10 2002 Sergio Pascual <sergiopr@astrax.fis.ucm.es> 2.0-1
+* Thu Jan 10 2002 Sergio Pascual <sergiopr@astrax.fis.ucm.es> 2.0-1
 - Initial RPM file.
