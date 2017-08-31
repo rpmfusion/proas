@@ -1,7 +1,7 @@
 Summary: Planning of astronomical observations
 Name: proas
 Version: 2.2.0
-Release: 4%{?dist}
+Release: 5%{?dist}
 License: GPL+
 Group: Applications/Engineering
 URL: https://guaix.fis.ucm.es/projects/proas/wiki
@@ -30,6 +30,9 @@ make DESTDIR=%{buildroot} install
 %{_bindir}/*
 
 %changelog
+* Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 2.2.0-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Sun Mar 26 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 2.2.0-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
